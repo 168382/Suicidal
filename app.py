@@ -4,6 +4,9 @@ app = Flask(__name__)
 
 products = []
 
+@app.route("/")
+def testing():
+    return"test successfull"
 @app.route('/products', methods=['POST'])
 def add_product():
     data = request.get_json()
